@@ -204,6 +204,8 @@ hook.Add("PlayerSay", "MG_TDM:WordMenuCommand", function(ply, text)
         
     -- Check if the command is "/wordmenu"
     if string.lower(args[1]) == "/wordmenu" then
+        -- Check has player Permission
+        if not (ply:IsSuperAdmin()) then return end
         net.Start("MG_WORDS_MENU")
           net.WriteString("open")
           net.WriteTable(MG_TDM_WORDS_BLACKLIST)
