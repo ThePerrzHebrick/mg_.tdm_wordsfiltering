@@ -59,7 +59,7 @@ function MG_TDM_WORDS_FILTERING.LoadWords()
         local jsonData = file.Read("blacklist_words.txt", "DATA")
         MG_TDM_WORDS_BLACKLIST = util.JSONToTable(jsonData)
         if MG_TDM_WORDS_BLACKLIST then
-            print("Data loaded from " .. "blacklist_words.txt")
+            print("Data loaded from blacklist_words.txt")
             return MG_TDM_WORDS_BLACKLIST
         else
             print("Failed to parse JSON data.")
