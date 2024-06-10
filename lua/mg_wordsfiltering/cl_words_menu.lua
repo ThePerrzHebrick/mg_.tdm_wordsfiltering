@@ -103,9 +103,4 @@ net.Receive("MG_WORDS_MENU", function()
         end
     end
 
-    function MG_WORDS_MENU.Menu:OnClose()
-        net.Start("MG_WORDS_MENU")
-            net.WriteString("close")
-        net.SendToServer()
-    end
 end)
