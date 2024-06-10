@@ -11,7 +11,9 @@ net.Receive("MG_WORDS_MENU", function()
     local ply = net.ReadEntity()
     -- Read the type from the network packet.
     local type = net.ReadString()
-    
+    -- Check has player Permission
+    if not (ply:IsSuperAdmin()) then return end
+
     -- Check if the type is "add" to add a word to the blacklist.
     if (type == "add") then 
         -- Check if the player object is valid.
