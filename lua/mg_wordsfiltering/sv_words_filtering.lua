@@ -1,7 +1,7 @@
-MG_TDM_WORDS_FILTERING = MG_TDM_WORDS_FILTERING or {}
+MG_TDM_WORDS_FILTE = MG_TDM_WORDS_FILTER or {}
 
 -- Function to check if a message contains any filtered words
-function MG_TDM_WORDS_FILTERING.containsFilteredWord(message)
+function MG_TDM_WORDS_FILTER.containsFilteredWord(message)
     for _, word in ipairs(MG_TDM_WORDS_BLACKLIST) do
         if string.find(string.lower(message), string.lower(word)) then
             return true
@@ -12,7 +12,7 @@ end
 
 -- Hook into the PlayerSay event to filter chat messages
 hook.Add("PlayerSay", "MG_TDM:WordFilter", function(ply, text)
-    if MG_TDM_WORDS_FILTERING.containsFilteredWord(text) then
+    if MG_TDM_WORDS_FILTER.containsFilteredWord(text) then
 
         if not (IsValid(ply)) then return end
 
