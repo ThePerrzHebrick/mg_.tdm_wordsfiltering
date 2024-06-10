@@ -20,7 +20,7 @@ hook.Add("PlayerSay", "MG_TDM:WordFilter", function(ply, text)
         DarkRP.notify(ply, 3, 4, "Du wurdest für 10 Minuten gemuted!") 
 
         -- Your courage is rebuilt, which is why I can't set a time for myself
-        RunConsoleCommand("ulx", "mute", ply:Nick(), 600)
+        RunConsoleCommand("ulx", "mute", ply:Nick(), 600) -- ulx.mute( calling_ply, target_plys, should_unmute )
 
         -- Possibly add a watchlist entry from here
         return ""
