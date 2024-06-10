@@ -16,6 +16,7 @@ hook.Add("PlayerSay", "MG_TDM:WordInsultFilter", function(ply, text)
 
         if not (IsValid(ply)) then return end
         -- if (ply:IsMuted()) then return end | IsMuted, I didn't find any variables for querying, or none worked with my ULX
+        -- Of course you could create your own methods, but they should be adapted to you
 
         ply:ChatPrint("Du kannst sowas doch nicht reinschreiben, dafür muss ich dich jetzt bestrafen!")
         DarkRP.notify(ply, 3, 4, "Du wurdest für 10 Minuten gemuted!") 
