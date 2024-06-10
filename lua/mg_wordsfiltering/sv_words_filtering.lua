@@ -1,4 +1,4 @@
-MG_TDM_WORDS_FILTE = MG_TDM_WORDS_FILTER or {}
+MG_TDM_WORDS_FILTER = MG_TDM_WORDS_FILTER or {}
 
 -- Function to check if a message contains any filtered words
 function MG_TDM_WORDS_FILTER.containsFilteredWord(message)
